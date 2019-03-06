@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="none">
+    <parameter name="url" value="https://www.unibet.co.uk/blog" />
+    <test name= "Mobile Device Test">
+        <parameter name="searchTerm" value="Hockey" />
+        <classes>
+            <class name="TestNGTests.BlogHomePageTests">
+                <methods>
+                    <include name="blogHomePageStatus"/>
+                    <include name="selectAndUnSelectTab"/>
+                    <include name="enterSearchTermInBlogTab"/>
+                </methods>
+            </class>
+            <class name="TestNGTests.BlogSearchPageTests">
+            <methods>
+                <include name="selectAndUnSelectTab"/>
+                <include name="noSearchResults"/>
+                <include name="searchSuggestions"/>
+                <include name="searchResults"/>
+            </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
